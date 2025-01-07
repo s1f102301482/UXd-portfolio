@@ -67,11 +67,13 @@ header p {
     color: var(--text-main-color);
 }
 
-body {
+#body {
     background-image: url("images/IMG_9576.jpg");
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
+    flex: 1; 
+    padding: 1rem;
   }
 
 /* ナビゲーションのスタイル */

@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #ffcc00; 
+    --secondary-color: #dddddd;
+    --accent-color: #ffcc00;
+    --text-color: #1e1e1e; 
+    --text-main-color: #ffcc00;
+    --background-color: #555555; 
+    --card-background: #f9f9f9; 
+    --footer-color: #000000;
+    --hover-text-color: #333333;
+}
+
+/* 全要素に対するリセットとボックスサイジングの設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 基本的なボディスタイル */
+html,body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-align: center;
+    height: 100%; /* 高さを100%に */
+    display: flex; /* フレックスボックスでレイアウト */
+    flex-direction: column; 
+}
+
+/* コンテナのスタイル */
+.container {
+    flex: 1; 
+    padding: 1rem;
+}
+
+
+/* ヘッダーのスタイル */
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main-color);
+}
+
+#hero-title {
+    font-size: 3rem;
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#hero-title.show {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    color: var(--text-main-color);
+}
+
+body {
+    background-image: url("IMG_9576.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+
+/* ナビゲーションのスタイル */
+nav {
+    background-color: var(--secondary-color);
+    padding: 20;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* セクションの共通スタイル */
+section {
+    margin: 4rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    color: var(--text-main-color);
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .photo-gallery img {
+    width: 150;
+    height: 100px;
+  }
+  
+  #bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  
+  #photo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    width: 640px;
+    height: 420px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+.skills-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    list-style-type: none;
+}
+
+
+.skill-card, .project-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: var(--secondary-color);
+    color: var(--hover-text-color);
+}
+
+.skill-card h3, .project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#main-container {
+    flex: 1; 
+    padding: 1rem;
+}
+
+
+/* フッターのスタイル */
+footer {
+    background-color: var(--footer-color);
+    color: var(--accent-color);
+    padding: 1rem 0;
+    text-align: center;
+    height: 3rem; 
+}
+
+#free-container {
+    background-image: url("images/IMG_9582.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    flex: 1; 
+    padding: 1rem;
+  }
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .skills-grid, .project-grid {
+        grid-template-columns: 1fr;
+    }
+    @media (max-width: 600px) {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            overflow-x: hidden; 
+            box-sizing: border-box; 
+        }
+        
+        nav a {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            padding: 5px 0; 
+            white-space: nowrap;
+        }
+    }
+   
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+    
+    footer {
+        font-size: 14px;
+    }
+}
+    
+  
+@media (min-width: 1025px) {
+    body {
+        font-size: 18px;
+    }
+    
+    footer {
+        font-size: 16px;
+    }
+}
+}
+
+/* ヒーローセクションのスタイル */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('images/IMG_9576.JPG') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+
+
+
+nav ul li a:hover {
+    background-color: var(--accent-color); 
+    color: #fff; 
+    padding: 0.5rem 1rem; 
+    border-radius: 5px; 
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.btn:hover {
+    background-color: var(--secondary-color); 
+    color: #fff; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
+    border: 1px solid var(--secondary-color); 
+}
+
+.skills-grid li:hover, .project-grid li:hover {
+    cursor: pointer; 
+    opacity: 0.9; 
+}

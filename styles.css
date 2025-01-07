@@ -230,6 +230,7 @@ footer {
     flex: 1; 
     padding: 1rem;
   }
+
 #title-container {
     background-image: url("images/IMG_9576.jpg");
     background-size: cover;
@@ -237,7 +238,6 @@ footer {
     background-repeat: no-repeat; 
     flex: 1; 
   }
-
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
